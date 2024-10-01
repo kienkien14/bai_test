@@ -23,10 +23,28 @@ public class Main {
         Student ngVanA = new Student("Nguyen Van Nam", 18, courses);
         Course java = new Course("Hoc Java", "Java");
         Course jsp = new Course("JSP Programming", "JSP");
-
+        registerCourse(ngVanA, java);
+        registerCourse(ngVanA, jsp);
         // Tạo method đăng ký thêm khóa học cho đối tượng ngVanA
         // Yêu cầu nếu khóa học trùng mã (code) với các khóa học đã sẵn trong đối tượng in ra : Course is exist
         // Nếu mã khóa học chưa tồn tại cho phép add thêm vào List<Course> và in ra: Add success
+    }
+
+    public static void registerCourse(Student student,Course course) {
+        List<Course> lstCourseExist = student.getCourses();
+        boolean isExist = false;
+        for (Course c : lstCourseExist) {
+            if (c.getCode().equals(course.getCode())) {
+                isExist = true;
+                break;
+            }
+        }
+        if (!isExist) {
+            lstCourseExist.add(course);
+            System.out.println("Add success");
+        } else {
+            System.out.println("Course is exist");
+        }
     }
 
 }

@@ -36,4 +36,16 @@ public class Student {
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
+
+    public void registerCourse(Course course) {
+        boolean exists = courses.stream()
+                .anyMatch(c -> c.getCode().equals(course.getCode()));
+
+        if (exists) {
+            System.out.println("Course is exist");
+        } else {
+            courses.add(course);
+            System.out.println("Add success");
+        }
+    }
 }

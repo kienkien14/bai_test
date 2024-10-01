@@ -25,7 +25,7 @@ public class Main {
         Course jsp = new Course("JSP Programming", "JSP");
 
         // Tạo method đăng ký thêm khóa học cho đối tượng ngVanA
-        // Yêu cầu nếu khóa học trùng mã (code) với các khóa học đã sẵn trong đối tượng in ra : Course is exist
+        // Yêu cầu nếu khóa học trùng mã (code) với các khóa học đã sẵn trong đối tượng in ra : git
         // Nếu mã khóa học chưa tồn tại cho phép add thêm vào List<Course> và in ra: Add success
         ngVanA.registerCourse(java);
         ngVanA.registerCourse(jsp);

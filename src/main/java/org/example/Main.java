@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
         Student ngVanA = new Student("Nguyen Van Nam", 18, courses);
-        Course java = new Course("Java Programming", "Java");
+        Course java = new Course("Hoc Java", "Java");
         Course jsp = new Course("JSP Programming", "JSP");
 
         // Tạo method đăng ký thêm khóa học cho đối tượng ngVanA
